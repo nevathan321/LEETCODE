@@ -1,5 +1,4 @@
-# Recyclable and Low Fat Products 
-
-SELECT product_id FROM Products 
-WHERE low_fats = 'Y' AND recyclable = 'Y' 
-
+Select 
+    product_id
+From Products 
+Where low_fats = 'Y' AND recyclable = 'Y'
