@@ -17,3 +17,31 @@ class Solution:
             if need in seen:
                 return [seen[need], i]
             seen[j] = i
+
+
+#--- 
+# Did this for fun :)
+
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+
+        seen = []
+
+        for i, num in enumerate(numbers): 
+            for j, s in enumerate(seen): 
+                if s + num == target: 
+                    return [j + 1, i + 1]
+            seen.append(num)
+
+
+#-- 
+# the standard approach for this now :(
+
+def twoSum(numbers: List[int], target: int) -> List[int]:
+    seen = {}
+
+    for i, num in enumerate(numbers): 
+        need = target - num 
+        if need in seen: 
+            return [seen[need] + 1, i + 1]
+        seen[num] = i
